@@ -1,0 +1,103 @@
+:root {
+    --bg-color: #fdf0f0;
+    --accent-red: #ff4b2b;
+    --yes-green: #2ecc71;
+    --white: #ffffff;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg-color);
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden; /* Prevents scrollbars when 'No' button moves */
+}
+
+.card {
+    background: var(--white);
+    padding: 2.5rem;
+    border-radius: 25px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    text-align: center;
+    max-width: 450px;
+    width: 90%;
+    z-index: 10;
+}
+
+h1 {
+    color: rgb(255, 184, 196);
+    font-size: 2.6rem;
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+}
+
+.gif-wrapper {
+    width: 100%;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+
+.gif-wrapper {
+    width: 100%;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+    position: relative; 
+    overflow: hidden;  
+}
+
+
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    min-height: 120px;
+    position: relative; 
+    z-index: 100;       
+}
+
+
+.tenor-gif-embed {
+    pointer-events: none; 
+}
+
+button {
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: transform 0.2s ease, font-size 0.2s ease;
+}
+
+#yesBtn {
+    background-color: var(--yes-green);
+    color: white;
+}
+
+#noBtn {
+    background-color: var(--accent-red);
+    color: white;
+}
+
+.hidden {
+    display: none;
+}
+
+#successContainer h1 {
+    animation: bounce 0.8s infinite alternate;
+}
+
+@keyframes bounce {
+    from { transform: translateY(0); }
+    to { transform: translateY(-10px); }
+}
